@@ -40,7 +40,7 @@ class syntax_plugin_bookmark extends DokuWiki_Syntax_Plugin {
     function getSort(){ return 357; }
  
     function connectTo($mode) {
-        $this->Lexer->addSpecialPattern('<BOOKMARK:\w+>',$mode,'plugin_bookmark');
+        $this->Lexer->addSpecialPattern('<BOOKMARK:[\w-]+>',$mode,'plugin_bookmark');
     }
  
  
